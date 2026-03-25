@@ -6,11 +6,11 @@
 /*   By: yihzhang <yihzhang@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/25 17:06:00 by yihzhang          #+#    #+#             */
-/*   Updated: 2026/03/25 18:09:03 by yihzhang         ###   ########.fr       */
+/*   Updated: 2026/03/25 18:27:05 by yihzhang         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "minishell.h"
+#include "lexer.h"
 
 t_token	*create_new_token(char *value, t_token_type type)
 {
