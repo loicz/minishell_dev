@@ -6,11 +6,11 @@
 /*   By: yihzhang <yihzhang@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/25 17:18:25 by yihzhang          #+#    #+#             */
-/*   Updated: 2026/03/25 18:03:33 by yihzhang         ###   ########.fr       */
+/*   Updated: 2026/03/25 18:20:52 by yihzhang         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "minishell.h"
+#include "lexer.h"
 
 int main() 
 {

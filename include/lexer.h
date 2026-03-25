@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   minishell.h                                        :+:      :+:    :+:   */
+/*   lexer.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yihzhang <yihzhang@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/25 18:05:55 by yihzhang          #+#    #+#             */
-/*   Updated: 2026/03/25 18:06:20 by yihzhang         ###   ########.fr       */
+/*   Updated: 2026/03/25 18:20:33 by yihzhang         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef MINISHELL_H
-# define MINISHELL_H
+#ifndef LEXER_H
+# define LEXER_H
 
 # include <stdio.h>
 # include <unistd.h>

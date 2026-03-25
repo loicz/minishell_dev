@@ -6,11 +6,11 @@
 /*   By: yihzhang <yihzhang@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/25 17:04:05 by yihzhang          #+#    #+#             */
-/*   Updated: 2026/03/25 18:11:07 by yihzhang         ###   ########.fr       */
+/*   Updated: 2026/03/25 18:20:45 by yihzhang         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "minishell.h"
+#include "lexer.h"
 
 //Compares up to n characters of two strings, returning 0 if they are an exact match and -1 if they differ or if either string is NULL.
 int	ft_strncmp(char *line, char *str, int n)
