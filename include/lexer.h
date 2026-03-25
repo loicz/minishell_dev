@@ -53,6 +53,13 @@ char	*ft_strndup(char *str, int n);
 #endif
 
 /*
+typedef enum e_quote_mode
+{
+	Q_NONE,
+	Q_SINGLE,
+	Q_DOUBLE
+}	t_quote_mode;
+
 typedef struct s_word_part
 {
 	char				*text;
