@@ -35,7 +35,7 @@ typedef enum e_token_type
 
 typedef struct s_token
 {
-	char			*value;
+	char			*value;  //替换为 t_word		*word
 	t_token_type	type;
 	// t_quote_type	quote;
 	struct s_token	*prev;
@@ -51,3 +51,18 @@ char	*ft_strdup(char *str);
 char	*ft_strndup(char *str, int n);
 
 #endif
+
+/*
+typedef struct s_word_part
+{
+	char				*text;
+	t_quote_mode		quote;
+	struct s_word_part	*next;
+}	t_word_part;
+
+typedef struct s_word
+{
+	t_word_part	*parts;
+	bool		join_next;
+}	t_word;
+*/
