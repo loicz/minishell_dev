@@ -6,7 +6,7 @@
 /*   By: yihzhang <yihzhang@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/25 17:18:25 by yihzhang          #+#    #+#             */
-/*   Updated: 2026/03/25 18:20:52 by yihzhang         ###   ########.fr       */
+/*   Updated: 2026/03/30 21:06:41 by yihzhang         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ int main()
     print_tokens(list);
     list = NULL;
 
-    printf("TEST 3: Operators\ncat|grep\n");
+    printf("TEST 3: Operators\ncat|grep || << < >> > (|)\n");
     lex_input("cat|grep || << < >> > (|)", &list);
     print_tokens(list);
     list = NULL;
