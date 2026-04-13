@@ -6,7 +6,7 @@
 /*   By: yihzhang <yihzhang@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/25 18:05:55 by yihzhang          #+#    #+#             */
-/*   Updated: 2026/03/30 21:02:54 by yihzhang         ###   ########.fr       */
+/*   Updated: 2026/04/13 15:51:44 by lozhao           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,6 @@ typedef enum e_token_type
 	TOK_OR,
 	TOK_LPAREN,
 	TOK_RPAREN,
-	TOK_EOF,
 	TOK_INVALLID
 }t_token_type;
 
