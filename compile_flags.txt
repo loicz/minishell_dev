@@ -1,0 +1,7 @@
+-Iinclude
+-Isrc
+-std=gnu11
+-Wall
+-Wextra
+-Werror
+-xc
