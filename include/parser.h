@@ -6,7 +6,7 @@
 /*   By: lozhao <lozhao@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/26 16:52:54 by lozhao            #+#    #+#             */
-/*   Updated: 2026/03/26 18:04:03 by lozhao           ###   ########.fr       */
+/*   Updated: 2026/04/13 16:21:57 by lozhao           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include <stddef.h>
 # include "lexer.h"
+# include "shell.h"
 
 typedef enum e_redir_type
 {
@@ -49,6 +50,7 @@ typedef enum e_ast_type
 	AST_SUBSHELL
 }	t_ast_type;
 
+typedef struct s_ast	t_ast;
 typedef struct s_ast
 {
 	t_ast_type			type;
@@ -67,6 +69,7 @@ typedef struct s_ast
 typedef struct s_parser
 {
 	t_token	*cur;
+	t_shell	*sh;
 }	t_parser;
 
 //part of principal functions that I will use, there will be more than this
@@ -75,4 +78,12 @@ t_ast	*ms_parse_simple_command(t_parser *ps);
 t_ast	*ms_parse_pipeline(t_parser *ps);
 t_ast	*ms_parse_logical_bonus(t_parser *ps);
 
+void	ms_ps_advance(t_parser *ps);
+t_ast	*ms_parse_tokens(t_token *tokens);
+
+
+t_word	*ms_tok_peek_word(t_token *tok);
+t_word	*ms_tok_take_word(t_parser *ps);
+bool	ms_word_is_quoted(t_word *word);
+void	ms_syntax_err_near(t_parser *ps, const char *context);
 #endif
