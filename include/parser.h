@@ -6,7 +6,7 @@
 /*   By: lozhao <lozhao@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/26 16:52:54 by lozhao            #+#    #+#             */
-/*   Updated: 2026/04/13 16:21:57 by lozhao           ###   ########.fr       */
+/*   Updated: 2026/04/14 16:21:05 by lozhao           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,9 +81,14 @@ t_ast	*ms_parse_logical_bonus(t_parser *ps);
 void	ms_ps_advance(t_parser *ps);
 t_ast	*ms_parse_tokens(t_token *tokens);
 
-
+//parse adaptors
 t_word	*ms_tok_peek_word(t_token *tok);
 t_word	*ms_tok_take_word(t_parser *ps);
 bool	ms_word_is_quoted(t_word *word);
 void	ms_syntax_err_near(t_parser *ps, const char *context);
+
+//parse utils
+bool	ms_tok_starts_redir(t_token *tok);
+bool	ms_tok_starts_simple_item(t_token *tok);
+bool	ms_tok_starts_primary(t_token *tok);
 #endif
