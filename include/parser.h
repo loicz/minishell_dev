@@ -6,7 +6,7 @@
 /*   By: lozhao <lozhao@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/03/26 16:52:54 by lozhao            #+#    #+#             */
-/*   Updated: 2026/04/14 16:21:05 by lozhao           ###   ########.fr       */
+/*   Updated: 2026/04/15 17:17:44 by lozhao           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,6 +86,12 @@ t_word	*ms_tok_peek_word(t_token *tok);
 t_word	*ms_tok_take_word(t_parser *ps);
 bool	ms_word_is_quoted(t_word *word);
 void	ms_syntax_err_near(t_parser *ps, const char *context);
+
+t_ast	*ms_new_binary(t_ast_type type, t_ast *left, t_ast *right);
+t_redir	*ms_new_redir(t_redir_type type, t_word *target);
+t_ast	*ms_new_subshell(t_ast *child);
+int		ms_cmd_add_word(t_ast *cmd, t_word *word);
+int		ms_cmd_add_redir(t_ast *cmd, t_redir *redir);
 
 //parse utils
 bool	ms_tok_starts_redir(t_token *tok);
