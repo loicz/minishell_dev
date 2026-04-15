@@ -6,7 +6,7 @@
 /*   By: lozhao <lozhao@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/14 16:32:36 by lozhao            #+#    #+#             */
-/*   Updated: 2026/04/14 18:13:20 by lozhao           ###   ########.fr       */
+/*   Updated: 2026/04/15 17:17:28 by lozhao           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,20 @@
 #include "parser.h"
 #include <stddef.h>
 #include <stdlib.h>
+
+t_redir	*ms_new_redir(t_redir_type type, t_word *target)
+{
+	t_redir	*redir;
+
+	redir = calloc(1, sizeof(t_ast));
+	if (!redir)
+		return (NULL);
+	redir->type = type;
+	redir->target = target;
+	redir->heredoc_fd = -1;
+	redir->heredoc_expand = true;
+	return (redir);
+}
 
 t_ast	*ms_new_binary(t_ast_type type, t_ast *left, t_ast *right)
 {
@@ -38,20 +52,6 @@ t_ast	*ms_new_subshell(t_ast *child)
 	node->type = AST_SUBSHELL;
 	node->u.child = child;
 	return (node);
-}
-
-t_redir	*ms_new_redir(t_redir_type type, t_word *target)
-{
-	t_redir	*redir;
-
-	redir = calloc(1, sizeof(t_redir));
-	if (!redir)
-		return (NULL);
-	redir->type = type;
-	redir->target = target;
-	redir->heredoc_fd = -1;
-	redir->heredoc_expand = true;
-	return (redir);
 }
 
 int	ms_cmd_add_word(t_ast *cmd, t_word *word)
